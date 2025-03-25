@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AppRoutes from './routing/Routes'; // Import the AppRoutes component
+import SideBar from './components/SideBar';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router> {/* Wrap the entire app in BrowserRouter */}
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header /> {/* Header component */}
+        <div style={{ display: 'flex', flex: 1 }}> {/* Main content area */}
+          <SideBar /> {/* Sidebar on the left */}
+          <div style={{ flex: 1, padding: '20px' }}> {/* Content area on the right */}
+            <AppRoutes /> {/* Render the routes or data here */}
+          </div>
+        </div>
+        <Footer /> {/* Footer component */}
+      </div>
+    </Router>
   );
 }
-
-export default App;
