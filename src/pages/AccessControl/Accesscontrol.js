@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Accesscontrol() {
-  return <div></div>;
+  return <div>Accesscontrol</div>;
 }

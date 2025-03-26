@@ -7,6 +7,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Landing from "../pages/Landing/Landing";
+import Accesscontrol from "../pages/AccessControl/Accesscontrol";
+import Search from "../pages/Search/Search";
 
 export default function AppRoutes() {
   return (
@@ -18,6 +20,8 @@ export default function AppRoutes() {
       <Route path="/Register" element={<Register />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/" element={<Landing />} />
+      <Route path="/AccessControl" element={<Accesscontrol />} />
+      <Route path="/Search" element={<Search />} />
     </Routes>
   );
 }
